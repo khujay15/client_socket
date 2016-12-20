@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
     cin.ignore();
     char http_request[256];
     cout<<endl;
-    cout<<"enter request: ";
+    cout<<"enter request(To braodcast, @broadcast: ";
     cin.getline(http_request,256);
 
 
@@ -106,7 +106,6 @@ int main(int argc, char *argv[])
     while(1)
     {
         char http[256];
-        cout<<"enter request(-broadcast!): ";
         cin>>http;
 
         if(http=="quit")
@@ -120,8 +119,6 @@ int main(int argc, char *argv[])
             cout<< strerror(errno)<<endl;
             exit(0);
         }
-        cout<<"####"<<endl;
-
     }
 
     close(sd);
